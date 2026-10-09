@@ -418,3 +418,7 @@ section{ position:relative; }
 .article-author img{ width:56px; height:56px; border-radius:50%; object-fit:cover; }
 .article-author strong{ display:block; color:var(--navy); font-family:var(--serif); font-size:1.05rem; }
 .article-author span{ font-size:0.86rem; color:var(--stone); }
+
+/* footer social icons */
+.footer-col a.footer-social-link{ display:flex; align-items:center; gap:10px; }
+.footer-col a.footer-social-link svg{ flex:none; }
