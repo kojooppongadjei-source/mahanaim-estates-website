@@ -11,8 +11,14 @@ Add a review the easy way:
 import json, html, re, pathlib, datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-# Set this to the "Ask for reviews" link from the Google Business Profile once it exists.
+# Google Business Profile settings.
+# GOOGLE_REVIEW_URL: the "Ask for reviews" link (g.page/r/...). Shows a "Review us on Google" button.
+# GOOGLE_PROFILE_URL: the public profile/reviews link. Shows the Google rating badge on /reviews.
+# Update GOOGLE_RATING and GOOGLE_COUNT whenever the numbers on Google change.
 GOOGLE_REVIEW_URL = ""
+GOOGLE_PROFILE_URL = ""
+GOOGLE_RATING = "5.0"
+GOOGLE_COUNT = 5
 
 
 def month_year(d):
@@ -52,10 +58,17 @@ def build():
             avg = sum(r["rating"] for r in reviews) / len(reviews)
             summary = f'<p class="review-summary"><strong>{avg:.1f} out of 5</strong> from {len(reviews)} client reviews</p>'
         listing = (f'<div class="review-grid">\n{cards}\n</div>\n{summary}\n'
-                   '<p class="review-note">Reviews are shared by past clients with their permission.</p>')
+                   '<p class="review-note">Reviews are shared by past clients, here on our site or on Google.</p>')
     else:
         listing = ('<p class="review-empty">No reviews have been published here yet. If we have worked together, '
                    "we would be grateful if you shared how it went using the form below.</p>")
+
+    badge = ""
+    if GOOGLE_PROFILE_URL:
+        badge = (f'<p class="google-badge"><span class="stars" aria-hidden="true">&#9733;</span> '
+                 f'<strong>{html.escape(GOOGLE_RATING)} out of 5</strong> from {int(GOOGLE_COUNT)} Google reviews. '
+                 f'<a href="{html.escape(GOOGLE_PROFILE_URL)}" target="_blank" rel="noopener">Read them on Google</a></p>')
+    listing = badge + ("\n" if badge else "") + listing
 
     google = (f'<a class="btn btn-line" href="{html.escape(GOOGLE_REVIEW_URL)}" target="_blank" rel="noopener">Review us on Google</a>'
               if GOOGLE_REVIEW_URL else "")

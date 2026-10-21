@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "name": "Sandra O.",
+    "type": "Google review",
+    "place": "",
+    "rating": 5,
+    "text": "Working with Eunice was an amazing experience from start to finish. She was professional, knowledgeable, patient, and truly cared about helping us find the right home. She communicated clearly throughout the entire process and made everything feel smooth and stress-free. Her attention to detail and dedication went above and beyond our expectations. I highly recommend her to anyone looking to buy or sell a home.",
+    "date": "2026-06-21"
+  },
+  {
+    "name": "Patience T.",
+    "type": "Google review",
+    "place": "",
+    "rating": 5,
+    "text": "My experience with Mahanaim Estate LLC was outstanding. Their team was professional, knowledgeable, and attentive throughout the entire process. They communicated clearly, answered all my questions promptly, and made what could have been a stressful experience feel smooth and manageable. I appreciated their honesty, integrity, and commitment to delivering quality service. I would confidently recommend Mahanaim Estate LLC to anyone looking for a trustworthy and dependable real estate company.",
+    "date": "2026-06-21"
+  },
+  {
+    "name": "Lane H.",
+    "type": "Google review",
+    "place": "",
+    "rating": 5,
+    "text": "Eunice has been a very attentive and helpful agent, I'm so very glad and lucky to have her.",
+    "date": "2026-06-21"
+  }
+]

@@ -477,6 +477,9 @@ section{ position:relative; }
 .review-note, .review-summary{ margin-top:22px; font-size:.9rem; color:var(--stone); }
 .review-summary strong{ color:var(--navy); }
 .review-empty{ font-size:1.05rem; color:var(--stone); max-width:56ch; }
+.google-badge{ margin:0 0 28px; font-size:1rem; color:var(--ink); }
+.google-badge strong{ color:var(--navy); }
+.google-badge a{ color:var(--navy); text-decoration:underline; text-underline-offset:3px; }
 .review-form{ max-width:720px; }
 .form-field select{ width:100%; padding:12px 14px; border:1px solid var(--stone-light); background:var(--white); font-family:var(--sans); font-size:1rem; border-radius:2px; }
 .rating-field{ border:0; padding:0; margin:0 0 20px; }
