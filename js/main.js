@@ -47,3 +47,26 @@ document.addEventListener('DOMContentLoaded', function () {
     rent.addEventListener('input', upd); piti.addEventListener('input', upd); upd();
   }
 });
+
+// ---- review form (Netlify Forms) ----
+document.addEventListener('DOMContentLoaded', function () {
+  var f = document.querySelector('form.review-form');
+  if (!f) return;
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = f.querySelector('button[type="submit"]');
+    var err = document.getElementById('reviewErr'); if (err) err.hidden = true;
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(f)).toString() })
+    .then(function (r) {
+      if (!r.ok) throw new Error('bad status');
+      f.reset(); f.hidden = true;
+      var done = document.getElementById('reviewDone'); if (done) done.hidden = false;
+    })
+    .catch(function () {
+      if (btn) { btn.disabled = false; btn.textContent = 'Submit review'; }
+      if (err) err.hidden = false;
+    });
+  });
+});

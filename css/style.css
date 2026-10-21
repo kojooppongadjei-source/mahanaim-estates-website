@@ -465,3 +465,29 @@ section{ position:relative; }
 @media (max-width:640px){ .calc{ grid-template-columns:1fr; } }
 .story p{ max-width:68ch; font-size:1.1rem; color:#3B3A4F; }
 .guide-cards .value-item a{ display:inline-block; margin-top:14px; color:var(--orange); font-weight:600; }
+
+/* ---------- Reviews ---------- */
+.review-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
+.review-card{ background:var(--white); border:1px solid var(--stone-light); padding:28px 26px; display:flex; flex-direction:column; gap:14px; }
+.stars{ color:var(--orange); font-size:1.15rem; letter-spacing:.12em; line-height:1; }
+.stars .off{ color:var(--stone-light); }
+.review-card blockquote{ font-family:var(--serif); font-size:1.1rem; line-height:1.5; color:var(--ink); margin:0; }
+.review-card footer strong{ display:block; color:var(--navy); }
+.review-card footer span{ font-size:.85rem; color:var(--stone); }
+.review-note, .review-summary{ margin-top:22px; font-size:.9rem; color:var(--stone); }
+.review-summary strong{ color:var(--navy); }
+.review-empty{ font-size:1.05rem; color:var(--stone); max-width:56ch; }
+.review-form{ max-width:720px; }
+.form-field select{ width:100%; padding:12px 14px; border:1px solid var(--stone-light); background:var(--white); font-family:var(--sans); font-size:1rem; border-radius:2px; }
+.rating-field{ border:0; padding:0; margin:0 0 20px; }
+.rating-field legend{ font-size:.85rem; font-weight:600; color:var(--navy); margin-bottom:8px; padding:0; }
+.star-input{ display:inline-flex; flex-direction:row-reverse; gap:4px; }
+.star-input input{ position:absolute; opacity:0; width:1px; height:1px; }
+.star-input label{ font-size:2.1rem; line-height:1; color:var(--stone-light); cursor:pointer; margin:0; }
+.star-input input:checked ~ label, .star-input label:hover, .star-input label:hover ~ label{ color:var(--orange); }
+.star-input input:focus-visible + label{ outline:2px solid var(--navy); outline-offset:3px; }
+.visually-hidden{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.check-field{ display:flex; gap:10px; align-items:flex-start; margin-bottom:22px; font-size:.92rem; color:var(--ink); }
+.check-field input{ margin-top:4px; width:auto; }
+.form-done{ margin-top:8px; padding:22px 24px; background:var(--white); border-left:3px solid var(--orange); max-width:720px; }
+.form-error{ margin-top:14px; color:var(--clay); font-size:.92rem; }
