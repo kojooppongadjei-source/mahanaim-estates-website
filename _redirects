@@ -1,3 +1,5 @@
+https://www.mahanaimestates.com/*  https://mahanaimestates.com/:splat  301!
+http://www.mahanaimestates.com/*  https://mahanaimestates.com/:splat  301!
 /about  /about.html  200
 /buyers  /buyers.html  200
 /sellers  /sellers.html  200
@@ -19,3 +21,4 @@
 /blog/pricing-inherited-distressed-property  /blog/pricing-inherited-distressed-property.html  200
 /blog/pricing-your-home-lancaster-county  /blog/pricing-your-home-lancaster-county.html  200
 /blog/sell-before-you-buy-pa-md  /blog/sell-before-you-buy-pa-md.html  200
+/reviews  /reviews.html  200
