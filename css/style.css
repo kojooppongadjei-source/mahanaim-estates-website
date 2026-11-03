@@ -494,3 +494,8 @@ section{ position:relative; }
 .check-field input{ margin-top:4px; width:auto; }
 .form-done{ margin-top:8px; padding:22px 24px; background:var(--white); border-left:3px solid var(--orange); max-width:720px; }
 .form-error{ margin-top:14px; color:var(--clay); font-size:.92rem; }
+
+/* ---------- Nearby town links ---------- */
+.nearby-links{ display:flex; flex-wrap:wrap; gap:12px 28px; font-size:1.05rem; }
+.nearby-links a{ color:var(--navy); font-weight:600; border-bottom:2px solid var(--orange); padding-bottom:2px; }
+.nearby-links a:hover{ color:var(--orange); }
