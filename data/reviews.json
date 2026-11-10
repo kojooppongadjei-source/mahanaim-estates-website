@@ -46,5 +46,13 @@
     "rating": 5,
     "text": "I worked with Mrs Eunice Manu and she was amazing. She tried to find a place that met what we were looking for. She was very patient and explained the process in layman’s terms. This was very important to us as first time buyers. 100% recommend!",
     "date": "2026-11-08"
+  },
+  {
+    "name": "Janet",
+    "type": "Buyer",
+    "place": "Lancaster",
+    "rating": 5,
+    "text": "Thank you for your patience and active listening. You consistently went above and beyond by researching leads, exploring potential properties, and presenting multiple options tailored to my needs. Also guiding me to the right resources, and next step that would help me achieve my goal",
+    "date": "2026-11-09"
   }
 ]
